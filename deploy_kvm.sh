@@ -10,16 +10,19 @@ if [[ -f defaults/main.yml ]]; then
     echo "Cleaning up old file"
     rm defaults/main.yml
 fi
+
+mkdir -p defaults
+
 source $1
 cat <<YAML > defaults/main.yml
 # KVM config
-kvm_vm_pool_dir: '${vm_pool}'
-kvm_install_host: "${vm_host}"
+kvm_vm_pool_dir: "${vm_pool}"
+kvm_install_host: ${vm_host}
 
 # Cloud Init Config
-vm_data_dir: ${vm_data_dir}
+vm_data_dir: "${vm_data_dir}"
 vm_recreate: ${recreate_vm}
-cloud_init_vm_image: ${vm_image}
+cloud_init_vm_image: "${vm_image}"
 cloud_init_vm_image_link: "${vm_image_link}"
 # Latest image is from https://cloud.centos.org/centos/7/images/
 
