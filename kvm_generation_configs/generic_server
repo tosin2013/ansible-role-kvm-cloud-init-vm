@@ -14,4 +14,6 @@ export vm_hostname="base.tosinakinosho.com"
 export public_key_location='~/.ssh/id_rsa.pub'
 export vcpu_count="2"
 export memory_count="2048"
-export vm_disk_size="25G"
+export vm_disk_size="20G"
+
+export vm_network="ovs-network"

@@ -14,7 +14,7 @@ fi
 mkdir -p defaults
 
 source $1
-cat <<YAML > defaults/main.yml
+cat <<YAML > /etc/ansible/roles/tosin2013.kvm_cloud_init_vm/defaults/main.yml
 # KVM config
 kvm_vm_pool_dir: "${vm_pool}"
 kvm_install_host: ${vm_host}
@@ -37,5 +37,5 @@ vm_public_key: "{{ lookup('file', '${public_key_location}') }}"
 vm_cpu: ${vcpu_count}
 vm_memory: ${memory_count}
 vm_root_disk_size: ${vm_disk_size}
-
+vm_network_br: ${vm_network}
 YAML
