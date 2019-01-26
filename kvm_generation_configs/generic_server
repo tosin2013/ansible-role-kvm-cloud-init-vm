@@ -1,0 +1,17 @@
+# Enviornment File used to generate main.yml
+export vm_pool="/var/lib/libvirt/images"
+
+
+# Cloud Init Config
+export vm_data_dir="/root/kvm/vms"
+export recreate_vm="true"
+export vm_image="CentOS-7-x86_64-GenericCloud.qcow2"
+export vm_image_link="https://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud-1809.qcow2"
+
+export vm_name="CentOS_Base"
+export vm_localhost_name="base.example.com"
+export vm_hostname="base.example.com"
+export public_key_location='~/.ssh/id_rsa.pub'
+export vcpu_count="2"
+export memory_count="2048"
+export vm_disk_size="25G"
