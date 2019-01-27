@@ -38,4 +38,5 @@ vm_cpu: ${vcpu_count}
 vm_memory: ${memory_count}
 vm_root_disk_size: ${vm_disk_size}
 vm_network_br: ${vm_network}
+source_bridge: ${source_bridge}
 YAML
