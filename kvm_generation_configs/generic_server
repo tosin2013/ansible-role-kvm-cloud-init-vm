@@ -1,5 +1,5 @@
 # Enviornment File used to generate main.yml
-export vm_pool="/home/example/kvmimages/"
+export vm_pool="/home/example/kvmimages/images"
 export vm_host=localhost
 
 # Cloud Init Config
