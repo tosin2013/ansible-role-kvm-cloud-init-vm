@@ -8,6 +8,19 @@ This role help deploy a new CentOS 7 vm on KVM.
 - Generate cloud init user/meta data and booting iso.
 - Increase root storage size to 20G.
 - Clean up cd-rom/booting iso/user/meta data
+- ovsswitch compatibility
+- added deploy_kvm.sh script to repo 
+
+*New usage*
+* Edit the [generic_server](https://github.com/tosin2013/ansible-role-kvm-cloud-init-vm/blob/master/kvm_generation_configs/generic_server) template
+* run deploy_kvm.sh script
+```
+sudo ./deploy_kvm.sh kvm_generation_configs/generic_server 
+```
+* run ansible playbook
+```
+ansible-playbook exampleplaybook.yml
+```
 
 **Tested Cloud Init Image**
 - CentOS
@@ -53,8 +66,7 @@ Example Playbook
   gather_facts: false
   tasks:
     - import_role:
-        name: ansible-role-kvm-cloud-init-vm
-
+        name: tosin2013.kvm_cloud_init_vm
 ~~~
 
 
@@ -70,4 +82,4 @@ Author Information
 ------------------
 
 This role was created in 2018 by [Jooho Lee](http://github.com/jooho).
-
+Modified by [Tosin Akinosho](http://github.com/tosin2013)
