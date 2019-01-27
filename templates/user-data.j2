@@ -40,7 +40,7 @@ packages:
   - psacct
   - ansible
   - pyOpenSSL
-
+  - qemu-guest-agent
 
 # Groups
 groups:
@@ -61,6 +61,14 @@ chpasswd:
   list: |
     ocp:admin
 
+# start qemu-guest-agent
+runcmd:
+  - [systemctl, start, qemu-guest-agent]
+
+# enable qemu-guest-agent
+runcmd:
+  - [systemctl, enable, qemu-guest-agent]
+   
 # Remove cloud-init when finished with it
 runcmd:
   - [ yum, -y, remove, cloud-init ]
